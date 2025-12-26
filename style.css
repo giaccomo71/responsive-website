@@ -104,6 +104,7 @@
   svg {
     max-width: 100%;
     display: block;
+    heigh: auto;
   }
   .wrapper {
     width: min(calc(100% - 48px), calc(1200 / 16 * 1rem));
@@ -116,11 +117,32 @@
     background-color: var(--color-header-bg);
     .topnav__homelink {
     }
+    .topnav__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 15px;
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        padding-block: 30px;
+      }
+    }
     .topnav__logo {
+      width: calc(70 / 16 * 1rem);
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        width: calc(128 / 16 * 1rem);
+      }
     }
     .topnav__links {
+      display: flex;
+      gap: 20px;
       list-style-type: none;
       padding: 0;
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        gap: 40px;
+      }
     }
     .topnav__item {
     }
