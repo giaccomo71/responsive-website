@@ -115,8 +115,7 @@
 @layer component {
   .topnav {
     background-color: var(--color-header-bg);
-    .topnav__homelink {
-    }
+
     .topnav__wrapper {
       display: flex;
       justify-content: space-between;
@@ -125,6 +124,11 @@
 
       @media (width >= calc(600 / 16 * 1rem)) {
         padding-block: 30px;
+      }
+    }
+    .topnav__homelink {
+      &:hover {
+        opacity: 0.9;
       }
     }
     .topnav__logo {
@@ -152,6 +156,11 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: var(--color-text-light);
+
+      &:hover {
+        text-decoration: underline 2px;
+        text-underline-offset: 4px;
+      }
     }
   }
 }
